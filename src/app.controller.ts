@@ -5,16 +5,8 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('saludo/:id')
-  getHello(@Param('id') id: string): string {
-    console.log(id);
-    return this.appService.getHello();
-  }
-
-  @Post(':ids')
-  createData(@Param('ids') id: string, @Body() payload: any): string {
-    const dat = '';
-    console.log(id);
-    return payload;
+  @Get('users')
+  getUsers(): string[] {
+    return this.appService.getUsers();
   }
 }
