@@ -17,8 +17,8 @@ export class ItemsService {
     return itemCreated;
   }
 
-  findAll() {
-    return `This action returns all items`;
+  async findAll() {
+    return await this.itemsModule.find({});
   }
 
   findOne(id: number) {
